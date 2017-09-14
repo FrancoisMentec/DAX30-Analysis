@@ -1,6 +1,6 @@
 ---
-title: "Test"
-author: "François Mentec"
+title: "DAX 30"
+author: "François Mentec, Olivier Pelgrin"
 date: "13 septembre 2017"
 output: html_document
 ---
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # DAX 30 analysis
 
-Data are from 10/09/2015 to 10/09/2017
+Data are from 09/09/2011 to 16/05/2017, there is a row for every minute.
 
 ## Candle chart by month
 
@@ -57,3 +57,5 @@ ggplot(data=dm, aes(x=month, y=close)) + geom_candlestick(aes(open=open, high=hi
   theme(axis.text.x=element_text(angle=45, hjust=1), panel.spacing=unit(2, "lines"))
 
 ```
+
+The growth on this period is of `r (df[nrow(df), "close"] / df[1, "open"] - 1) * 100`%
