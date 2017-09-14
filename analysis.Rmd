@@ -16,8 +16,8 @@ Data are from 10/09/2015 to 10/09/2017
 
 ## Candle chart by month
 
-```{r 2y}
-df = read.csv("2yDAX.csv", header=TRUE, sep=";")
+```{r 6y by month}
+df = read.csv("6yDAX.csv", header=TRUE, sep=";")
 
 currentMonth = NULL
 open = NULL
